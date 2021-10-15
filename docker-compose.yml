@@ -1,0 +1,32 @@
+version: "3.7"
+
+services:
+  jekyll:
+    stdin_open: true
+    tty: true
+    ports:
+      - 4000:4000
+    command: ["bundle", "exec", "jekyll", "serve"]
+    image: jekyll
+    build:
+      context: ./docs
+    volumes:
+      - ./docs:/app
+      - jekyll_bundle:/app/vendor/bundle/
+
+  webpack:
+    stdin_open: true
+    tty: true
+    ports:
+      - 8080:8080
+    image: jekyll
+    build:
+      context: ./docs
+    command: ["yarn", "run", "start"]
+    volumes:
+      - ./docs:/app
+      - webpack_node_modules:/app/node_modules/
+
+volumes:
+  jekyll_bundle:
+  webpack_node_modules:

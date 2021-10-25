@@ -1,0 +1,70 @@
+---
+layout: default
+---
+
+<!-- This example requires Tailwind CSS v2.0+ -->
+
+<div class="hero bg-white">
+  <div class="flex-col hero-content">
+    <div class="max-w-xl">
+      <img src="https://images.unsplash.com/photo-1520333789090-1afc82db536a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2102&q=80" class="max-w-full rounded-lg shadow-2xl">
+    </div>
+    <div class="max-w-xl">
+      <h1 class="mb-5 text-4xl font-bold">
+        Developer program
+      </h1>
+      <p class="mb-5">
+         has been initiated by Dock community to support growth of Dock ecosystem and reward open source developers for theirs hard work.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="mx-auto max-w-7xl w-full text-center mt-8 sm-text-justify">
+  <h2 class="text-3xl tracking-tight font-bold">
+    <span class="block xl:inline">How does it work?</span>
+  </h2>
+  <p class="mt-6 max-w-3xl mx-auto">
+    There are plenty of tasks Dock foundation and community would love to solve. If you are developer then there is nothing simpler then choosing one of the stasks listed below and start work on it.
+  </p>
+  <p class="mt-6 max-w-3xl mx-auto">When you are done, just submit your work to <a class="link" href="mailto:support@dock.io">support@dock.io</a> and receive a reward.</p>
+</div>
+
+<div id="tasks" class="mx-auto max-w-7xl w-full mt-8 mb-8 text-center">
+  <h2 class="text-3xl tracking-tight font-bold">
+    <span class="block xl:inline">Tasks</span>
+  </h2>
+</div>
+
+<div class="grid sm:grid-cols-1 lg:grid-cols-3 gap-4 mb-20 max-w-7xl mx-auto text-center">
+  {% for task in site.data.tasks %}
+    <div class="pt-6">
+      <div class="flow-root bg-gray-50 rounded-lg px-6 pb-8">
+        <div class="-mt-6">
+          <div>
+            <span class="inline-flex items-center justify-center p-3 bg-indigo-500 rounded-md shadow-lg">
+              <!-- Heroicon name: outline/cloud-upload -->
+              {{task.icon}}
+            </span>
+          </div>
+          <h3 class="mt-8 text-lg font-medium text-gray-900 tracking-tight">{{ task.title }}</h3>
+          <p class="mt-5 text-base text-gray-500 text-justify">
+            {{ task.description }}
+          </p>
+
+          <div class="badge mx-2 badge-info">{{task.reward}}K Docks</div>
+          <a href="{{ task.pdf_link }}" class="btn btn-ghost" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
+<div class="mx-auto max-w-7xl w-full text-center">
+  <!-- <a class="btn btn-info btn-lg " href="mailto:support@dock.io">Submit task</a> -->
+  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScEFFLcsm-_r0YG1vwj5SsSjBxkynWkzi9L07qgrY0c4qSTlg/viewform?embedded=true" height="947" frameborder="0" marginheight="0" marginwidth="0" class="mx-auto max-w-7xl w-full">Loading…</iframe>
+</div>

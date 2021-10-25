@@ -1,0 +1,25 @@
+<html>
+<head>
+  <title>{{ site.title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% if jekyll.environment == "production" %}
+    <script src="assets/javascripts/bundle.js"></script>
+  {% else %}
+    <script src="http://localhost:8080/bundle.js"></script>
+  {% endif %}
+</head>
+<body>
+  <div class="drawer">
+    <input id="my-drawer-3" type="checkbox" class="drawer-toggle">
+    <div class="flex flex-col drawer-content">
+      <div class="pb-8 pr-8 pl-8">
+        {% include navbar.html %}
+        {{ content }}
+      </div>
+    </div>
+    <div class="drawer-side">
+      {% include drawer.html %}
+    </div>
+  </div>
+</body>
+</html>

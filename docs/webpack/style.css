@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.dock-logo {
+  height: 32px;
+  width: 95px;
+}
+
+.hero-content {
+  padding: 0;
+  flex-direction: row-reverse;
+}
+
+.lg-block {
+  display: block;
+}
+
+.lg-hidden {
+  display: none;
+}
+
+.drawer-button-open {
+  display: none;
+}
+
+.rounded-box {
+  border-radius: 0.5rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .hero {
+    display: block;
+  }
+
+  .lg-block {
+    display: none;
+  }
+
+  .lg-hidden {
+    display: block;
+  }
+
+  .drawer-button-open {
+    display: inline-flex;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-content {
+    flex-direction: column;
+  }
+
+  .sm-text-justify {
+    text-align: justify;
+  }
+}

@@ -1,32 +1,53 @@
-<div class="mx-auto max-w-7xl w-full text-center sm-text-justify navbar mb-6">
+<div class="text-center sm-text-justify navbar">
   <div class="flex-1 px-2 mx-2">
     <a href="https://www.dock.io" class="block dock-logo">
-      <img class="dock-logo" src="https://uploads-ssl.webflow.com/5e97941735e37a5ef19d10aa/601483e72237f407809dcfbc_dock-logo-footer.png" alt="">
+      <img class="dock-logo" src="/assets/images/dock.svg" alt="">
+    </a>
+
+  </div>
+  <div class="flex-1 lg-block hidden lg:flex md:flex">
+    <div class="dropdown dropdown-hover text-black whitespace-nowrap">
+      <div tabindex="0" class="m-1 btn btn-ghost hover:bg-gray-100 border-0 flex-nowrap">
+        Developers
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 inline-block ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+
+      </div>
+      <ul tabindex="0" class="shadow menu dropdown-content bg-white rounded-box w-52">
+        <li class="mt-2"><a href="https://docs.api.dock.io/">API documentation</a></li>
+        <li><a href="https://github.com/docknetwork">Github</a></li>
+        <li class="mb-2"><a href="https://www.dock.io/pricing">Pricing</a></li>
+      </ul>
+    </div>
+    <div class="dropdown dropdown-hover text-black">
+      <div tabindex="1" class="m-1 btn btn-ghost hover:bg-gray-100 border-0 flex-nowrap">
+        Network
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 inline-block ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </div>
+      <ul tabindex="0" class="shadow menu dropdown-content bg-white rounded-box w-52">
+        <li class="mt-2"><a href="https://www.dock.io/token">Dock token</a></li>
+        <li><a href="https://www.dock.io/governance">Governance</a></li>
+        <li><a href="https://www.dock.io/validators">Validators</a></li>
+        <li><a href="https://www.dock.io/proof-of-stake">Proof of Stake</a></li>
+        <li class="mb-2"><a href="https://dock.subscan.io/">Explorer</a></li>
+      </ul>
+    </div>
+    <a tabindex="2" class="m-1 btn btn-ghost hover:bg-gray-100 border-0" href="https://www.dock.io/apps">
+      Apps
+    </a>
+    <a tabindex="3" class="m-1 btn btn-ghost hover:bg-gray-100 border-0" href="https://www.dock.io/about">
+      About
     </a>
   </div>
-  <div class="flex-1 lg-block">
-    <div class="dropdown text-black">
-      <div tabindex="0" class="m-1 btn btn-ghost">Developer program</div>
-      <ul tabindex="0" class="p-2 shadow menu dropdown-content bg-white rounded-box w-52">
-        <li><a href="#tasks">Tasks</a></li>
-      </ul>
-    </div>
-    <div class="dropdown text-black">
-      <div tabindex="0" class="m-1 btn btn-ghost">Resources</div>
-      <ul tabindex="0" class="p-2 shadow menu dropdown-content bg-white rounded-box w-52">
-        <li><a href="https://docs.api.dock.io/#dock-api">Dock API</a></li>
-        <li><a href="https://github.com/docknetwork/sdk">SDK</a></li>
-        <li><a href="https://github.com/docknetwork">Github</a></li>
-        <li><a href="https://www.youtube.com/channel/UC8vcF6sIhussJ6nZsSid_cA/videos">Youtube</a></li>
-      </ul>
-    </div>
-  </div>
   <div class="flex-1 justify-end">
-    <label for="my-drawer-3" class="btn btn-square btn-ghost drawer-button-open">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-6 h-6 stroke-current">
+    <label for="mobile-menu" class="mobile-menu-button btn btn-square btn-ghost border-0 drawer-button-open lg:hidden md:hidden inline-flex p-0">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block text-gray-900 w-6 h-6 stroke-current">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
       </svg>
     </label>
   </div>
 </div>
-
+{% include mobile_menu.html %}

@@ -2,69 +2,183 @@
 layout: default
 ---
 
-<!-- This example requires Tailwind CSS v2.0+ -->
-
-<div class="hero bg-white">
-  <div class="flex-col hero-content">
-    <div class="max-w-xl">
-      <img src="https://images.unsplash.com/photo-1520333789090-1afc82db536a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2102&q=80" class="max-w-full rounded-lg shadow-2xl">
-    </div>
-    <div class="max-w-xl">
-      <h1 class="mb-5 text-4xl font-bold">
-        Developer program
-      </h1>
-      <p class="mb-5">
-         has been initiated by Dock community to support growth of Dock ecosystem and reward open source developers for theirs hard work.
-      </p>
+<div class="bg-black text-center text-white lg:py-16 py-8">
+  <div class="container prose-xl">
+    <h1 class="leading-none font-semibold text-white">Join Dock's <br/> Developer program</h1>
+    <p class="leading-7 text-gray-500">
+      Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure <br/> qui lorem cupidatat commodo. Elit sunt amet fugiat veniam <br/> occaecat fugiat aliqua.
+    </p>
+    <div class="mt-8">
+      <div class="btn btn-primary mr-4">
+        Join developer program
+      </div>
+      <div class="btn btn-secondary mt-6 lg:mt-0 md:mt-0">
+        Submit task
+      </div>
     </div>
   </div>
 </div>
 
-<div class="mx-auto max-w-7xl w-full text-center mt-8 sm-text-justify">
-  <h2 class="text-3xl tracking-tight font-bold">
-    <span class="block xl:inline">How does it work?</span>
-  </h2>
-  <p class="mt-6 max-w-3xl mx-auto">
-    There are plenty of tasks Dock foundation and community would love to solve. If you are developer then there is nothing simpler then choosing one of the stasks listed below and start work on it.
-  </p>
-  <p class="mt-6 max-w-3xl mx-auto">When you are done, just submit your work to <a class="link" href="mailto:support@dock.io">support@dock.io</a> and receive a reward.</p>
-</div>
+<div class="bg-white text-block lg:pt-16 pt-8">
+  <div class="container why-join-block">
+    <div class="grid lg:grid-cols-2 md:grid-cols-1 gap-8">
+      <div>
+        <div class="prose-xl mb-10">
+          <h2>Why join?</h2>
 
-<div id="tasks" class="mx-auto max-w-7xl w-full mt-8 mb-8 text-center">
-  <h2 class="text-3xl tracking-tight font-bold">
-    <span class="block xl:inline">Tasks</span>
-  </h2>
-</div>
-
-<div class="grid sm:grid-cols-1 lg:grid-cols-3 gap-4 mb-20 max-w-7xl mx-auto text-center">
-  {% for task in site.data.tasks %}
-    <div class="pt-6">
-      <div class="flow-root bg-gray-50 rounded-lg px-6 pb-8">
-        <div class="-mt-6">
-          <div>
-            <span class="inline-flex items-center justify-center p-3 bg-indigo-500 rounded-md shadow-lg">
-              <!-- Heroicon name: outline/cloud-upload -->
-              {{task.icon}}
-            </span>
+          <div class="prose">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur minima sequi recusandae, porro maiores officia assumenda aliquam laborum ab aliquid veritatis impedit odit adipisci optio iste blanditiis facere.
+            </p>
           </div>
-          <h3 class="mt-8 text-lg font-medium text-gray-900 tracking-tight">{{ task.title }}</h3>
-          <p class="mt-5 text-base text-gray-500 text-justify">
-            {{ task.description }}
-          </p>
+        </div>
 
-          <div class="badge mx-2 badge-info">{{task.reward}}K Docks</div>
-          <a href="{{ task.pdf_link }}" class="btn btn-ghost" target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-            </svg>
+        {% for item in site.data.why_join %}
+          <div class="flex prose">
+            <div class="flex-0">
+              <div class="icon-block">
+                {{item.icon}}
+              </div>
+            </div>
+            <div class="flex-1 ml-6">
+              <h3 class="mt-0">{{item.title}}</h3>
+              <p>
+                {{item.description}}
+              </p>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+
+      <div class="">
+        <div class="placeholder h-full w-full bg-gray-100"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="bg-white text-block lg:pt-16 pt-8">
+  <div class="container ">
+    <div class="text-center mx-auto prose-xl">
+      <h2 class="">How it works</h2>
+      <p class="max-w-4xl mx-auto prose">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur minima sequi recusandae, porro maiores officia assumenda aliquam laborum ab aliquid veritatis impedit odit adipisci optio iste blanditiis facere.
+      </p>
+    </div>
+
+    <div class="grid lg:grid-cols-3 md:lg:grid-cols-1 lg:gap-8 gap-16 how-it-works-block mt-16">
+      {% for item in site.data.how_it_works %}
+        <div class="bg-gray-100 rounded-md prose mx-auto md:max-w-lg">
+          <div class="w-full text-center">
+            <div class="icon-block">
+              {{item.icon}}
+            </div>
+          </div>
+
+          <div class="px-10">
+            <h4 class="text-center">{{item.title}}</h4>
+            <p class="text-center">
+              {{item.description}}
+            </p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<div class="bg-white text-block lg:pt-16 pt-8">
+  <div class="container ">
+    <div class="prose-xl">
+      <h3 class="">Choose a task</h3>
+      <p class="prose">
+        Select on one of the following task below
+      </p>
+    </div>
+
+    <div class="grid lg:grid-cols-4 md:grid-cols-2 gap-8 task-block mt-16">
+      {% for item in site.data.tasks %}
+        <div class="prose">
+          <div class="w-full">
+            <div class="icon-block icon-block-grey">
+              {{item.icon}}
+            </div>
+          </div>
+
+          <div>
+            <h4>{{item.title}}</h4>
+            <p>
+              {{item.description}}
+            </p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<div class="bg-white text-block lg:pt-16 pt-8">
+  <div class="container">
+    <div class="grid lg:grid-cols-2 gap-8">
+      <div>
+        <div class="prose-xl pr-10">
+          <h3>Submit task for review</h3>
+          <p class="prose">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ex obcaecati natus eligendi delectus, cum deleniti sunt in labore nihil quod quibusdam expedita nemo.
+          </p>
+        </div>
+
+        <div class="mt-16">
+          <div class="btn btn-primary mr-4">
+            Submit task
+          </div>
+          <a class="btn btn-info" href="https://docs.api.dock.io/" target="_blank">
+            Explore Docs
           </a>
         </div>
       </div>
+
+      <div class="">
+        <div class="placeholder h-full w-full bg-gray-100"></div>
+      </div>
     </div>
-  {% endfor %}
+  </div>
 </div>
 
-<div class="mx-auto max-w-7xl w-full text-center">
-  <!-- <a class="btn btn-info btn-lg " href="mailto:support@dock.io">Submit task</a> -->
-  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScEFFLcsm-_r0YG1vwj5SsSjBxkynWkzi9L07qgrY0c4qSTlg/viewform?embedded=true" height="947" frameborder="0" marginheight="0" marginwidth="0" class="mx-auto max-w-7xl w-full">Loading…</iframe>
+<div class="bg-white text-block lg:pt-16 pt-8">
+  <div class="container">
+    <div class="grid lg:grid-cols-2 gap-8">
+      <div>
+        <div class="prose-xl pr-10">
+          <h3>Get a reward</h3>
+          <p class="prose">
+            Your submission will be reviewed and the reward will be given accordingly. Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ex obcaecati natus eligendi delectus,
+          </p>
+        </div>
+      </div>
+
+      <div>
+        <div class="placeholder h-full w-full bg-gray-100"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="bg-white text-block lg:pt-16 pt-8">
+  <div class="container ">
+    <div class="prose-xl">
+      <h3>Frequently asked questions</h3>
+    </div>
+    <div class="divider"></div>
+    <div class="grid lg:grid-cols-2 gap-8 task-block lg:mt-16 mt-8">
+      {% for item in site.data.faqs %}
+        <div class="prose">
+          <h4>{{item.title}}</h4>
+          <p>
+            {{item.description}}
+          </p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
 </div>

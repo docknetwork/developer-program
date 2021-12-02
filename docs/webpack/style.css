@@ -2,56 +2,128 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --rounded-box: 0.3rem;        /* border-radius for cards and other big elements */
+  --rounded-btn: 0.3rem;      /* border-radius for buttons and similar elements */
+  --rounded-badge: 1.9rem;    /* border-radius for badge and other small elements */
+
+  --animation-btn: 0.25s;     /* bounce animation time for button */
+  --animation-input: 0.2s;     /* bounce animation time for checkbox, toggle, etc */
+
+  --padding-card: 2rem;       /* default card-body padding */
+
+  --btn-text-case: inherit; /* default text case for buttons */
+  --navbar-padding: 0.5rem;    /* default padding for navbar */
+  --border-btn: 1px;          /* default border size for button */
+}
+
+body {
+  font-family: "Nunito Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: 400;
+  color: #71717A;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Montserrat, sans-serif;
+  color: #18181B;
+}
+
+h1, h2 {
+  font-weight: 600 !important;
+}
+
+h3, h4, h5, h6 {
+  font-weight: 500 !important;
+}
+
+.prose h1, .prose h2, .prose h3, .prose h4, .prose strong,
+.prose-xl h1, .prose-xl h2, .prose-xl h3, .prose-xl h4, .prose-xl strong,
+.prose h1:hover, .prose h2:hover, .prose h3:hover, .prose h4:hover, .prose strong:hover,
+.prose-xl h1:hover, .prose-xl h2:hover, .prose-xl h3:hover, .prose-xl h4:hover, .prose-xl strong:hover {
+  color: #18181B;
+}
+
+.prose-xl h1 {
+  line-height: 5rem;
+  margin-bottom: 0.5rem;
+}
+.text-white {
+  color: #fff !important;
+}
+
 .dock-logo {
   height: 32px;
   width: 95px;
 }
 
-.hero-content {
+.navbar {
+  height: 90px;
+}
+
+.container {
+  @apply mx-auto max-w-7xl w-full px-5
+}
+
+.placeholder {
+  min-height: 250px;
+}
+
+.icon-block {
+  @apply h-12 w-12 bg-primary inline-flex flex-wrap content-center justify-center flex-shrink text-center text-white rounded-md
+}
+
+.why-join-block h3 {
+  margin-top: 0 !important;
+}
+
+.how-it-works-block .icon-block {
+  margin-top: -24px;
+}
+
+.icon-block-grey {
+  @apply bg-gray-100 text-black;
+}
+
+.divider:after, .divider:before {
+  background-color: #3f3f46;
+  height: 1px;
+}
+
+ul li a {
+  @apply leading-7;
+}
+
+.footer-container ul li a {
+  color: #c5c5c5;
+}
+
+.footer-container ul li a:hover {
+  color: #fff;
+}
+
+ul.menu li {
+  @apply hover:bg-gray-100
+}
+
+#mobile-menu:checked~.mobile-menu {
+  @apply block;
+}
+
+.btn {
+  text-transform: initial !important;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 28px;
+  height: 62px;
+}
+
+.mobile-menu-button {
   padding: 0;
-  flex-direction: row-reverse;
 }
 
-.lg-block {
-  display: block;
+a.btn {
+  text-decoration: none;
 }
 
-.lg-hidden {
-  display: none;
-}
-
-.drawer-button-open {
-  display: none;
-}
-
-.rounded-box {
-  border-radius: 0.5rem;
-}
-
-@media only screen and (max-width: 600px) {
-  .hero {
-    display: block;
-  }
-
-  .lg-block {
-    display: none;
-  }
-
-  .lg-hidden {
-    display: block;
-  }
-
-  .drawer-button-open {
-    display: inline-flex;
-    align-items: center;
-    text-align: center;
-  }
-
-  .hero-content {
-    flex-direction: column;
-  }
-
-  .sm-text-justify {
-    text-align: justify;
-  }
-}

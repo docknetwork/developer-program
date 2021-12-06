@@ -6,6 +6,7 @@
   "dependencies": {
     "@babel/core": "^7.15.8",
     "@babel/preset-env": "^7.15.8",
+    "@tailwindcss/typography": "^0.4.1",
     "babel-loader": "^8.2.3",
     "css-loader": "^6.4.0",
     "daisyui": "^1.14.7",

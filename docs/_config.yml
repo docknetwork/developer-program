@@ -28,6 +28,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://developer-program.dock.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: docknetwork
 github_username:  docknetwork
+host: 0.0.0.0
 
 # Build settings
 # theme: minima

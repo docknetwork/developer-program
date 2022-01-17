@@ -1,23 +1,13 @@
-- title: What's the requirement?
+- title: What objectives must be met to be considered for a grant?
   description: |
-    I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.
+    At least one of the following objectives must be met:
+    <ol>
+      <li>Develop applications using Dock’s credentialing technology for specific use cases</li>
+      <li>Ecosystem components designed to further usage and adoption</li>
+      <li>Low-level infrastructure development</li>
+    </ol>
 
-- title: Why do you never see elephants hiding in trees?
-  description: |
-    Because they're so good at it. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.
 
-- title: How do you make holy water?
+- title: What criteria must the projects meet?
   description: |
-    You boil the hell out of it. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.
-
-- title: Why can't you hear a pterodactyl go to the bathroom?
-  description: |
-    Because the pee is silent. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.
-
-- title: What do you call someone with no body and no nose?
-  description: |
-    Nobody knows. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.
-
-- title: Why did the invisible man turn down the job offer?
-  description: |
-    He couldn't see himself doing it. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.
+    Grant applicants must clearly demonstrate how their project fulfills one or more of the objectives listed under “How It Works”. The individual/team must have proven experience in their field and have the skills required to complete the project, and all code produced as part of a grant must be open-source.

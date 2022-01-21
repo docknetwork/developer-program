@@ -11,3 +11,17 @@
 - title: What criteria must the projects meet?
   description: |
     Grant applicants must clearly demonstrate how their project fulfills one or more of the objectives listed under “How It Works”. The individual/team must have proven experience in their field and have the skills required to complete the project, and all code produced as part of a grant must be open-source.
+
+- title: What is required to receive the grant reward?
+  description: |
+    Eligibility to receive the rewards will be based on the following criteria:
+    <ol>
+      <li>Tasks are completed as instructed, in the case of Custom Projects, as agreed upon between the Dock team and the Participant</li>
+      <li>Projects and tasks comply with the Program Terms</li>
+      <li>Completion of the Tasks are reported to the Dock team and proof of completion is provided as requested</li>
+      <li>The Dock team reviews and approves the submitted work</li>
+    </ol>
+
+- title: How is the grant reward determined?
+  description: |
+    The reward amounts will be different for the Tasks and Projects submitted based on the effort and resource requirements, and will be communicated to the applicant prior to being awarded the grant. The reward will be based on a USD amount and paid in Dock tokens at the time of completion.

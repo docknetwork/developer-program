@@ -62,7 +62,7 @@ layout: default
     <div class="text-center mx-auto prose-xl">
       <h2 class="">How it works</h2>
       <p class="max-w-4xl mx-auto prose">
-        Projects must meet at least one of the following objectives: developing applications using Dock’s credentialing technology for a specific use case, ecosystem components designed to further usage and adoption, and low-level infrastructure development.
+        Projects must meet at least one of the following objectives: applications using Dock’s credentialing technology for a specific use case, ecosystem components to further usage and adoption, and low-level infrastructure development.
       </p>
     </div>
 
@@ -103,6 +103,9 @@ layout: default
             <div class="icon-block icon-block-grey">
               {{item.icon}}
             </div>
+            {% if item.github_link %}
+              <div class="badge badge-success bg-green-100">Completed</div>
+            {% endif %}
           </div>
 
           <div>
@@ -110,6 +113,11 @@ layout: default
             <p>
               {{item.description}}
             </p>
+            {% if item.github_link %}
+              <p>
+                <a href="{{item.github_link}}" target="_blank">{{item.github_link}}</a>
+              </p>
+            {% endif %}
           </div>
         </div>
       {% endfor %}
